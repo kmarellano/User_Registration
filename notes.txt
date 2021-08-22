@@ -1,0 +1,17 @@
+Activity 2
+
+Create a new MERN project called User_Registration. You may use activity 1 as basis.
+
+Requirements:
+	- A page to gather user information, it’s up to you what user information you’ll collect. The more the better.
+	- User details should be saved into the database
+	- Identify required fields, should not proceed if empty
+	- A page to list the registered users, with actions edit and delete
+	- A page to edit the user information
+	- Be creative, the realistic the better.
+	- Optional, you may change some color in bootstrap css.
+
+Note:
+Please don't submit downloaded program
+Program should be uploaded to github
+Every small progress of the program should be committed to github
