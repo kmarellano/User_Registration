@@ -1,8 +1,8 @@
-import Register from './Register';
+import Navigation from './Navigation';
 function Body() {
     return (
         <div>
-            <Register/>
+            <Navigation/>
         </div>
     )
 }

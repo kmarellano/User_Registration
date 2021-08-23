@@ -13,11 +13,10 @@ const seedUsers = async() => {
         console.log("Items Reset");
         for (var i = 0; i < 10; i++) {
             let users = await User.create({
-                'username': faker.internet.userName(),
+                'firstname': faker.name.firstName(),
+                'lastname': faker.name.lastName(),
                 'email': faker.internet.email(),
                 'password': faker.internet.password(),
-                'name': `${faker.name.firstName()} ${faker.name.lastName()}`,
-                'address': faker.address.streetAddress(),
                 'phone': faker.datatype.number(),
                 'birthday': faker.datatype.datetime(),
             });

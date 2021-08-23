@@ -1,9 +1,9 @@
-function Header() {
+function Header({title,desc}) {
     return (
         <header className="header">
-            <h2>Sign Up</h2>
-            <p>Fill this form to create your account!</p>
-            <hr />
+            <h2>{title}</h2>
+            <p>{desc}</p>
+            <hr/>
         </header>
     )
 }

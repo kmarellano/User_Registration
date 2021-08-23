@@ -1,8 +1,10 @@
 // import { AiOutlineEye, AiFillEye} from 'react-icons/ai'
 import React, { useState } from 'react'
-
+import Header from './Header';
+import { useHistory } from "react-router";
 
 function Register() {
+    const history = useHistory();
     const [firstname,setFirst] = useState('');
     const [lastname,setLast] = useState('');
     const [email,setEmail] = useState('');
@@ -14,11 +16,14 @@ function Register() {
      const handleSubmit = (e) =>{
         e.preventDefault();
         // console.log(firstname,lastname,email,password,conpass,phone,birthday);
-        if(password !== conpass){
+        if(password !== conpass)
             alert("The password confirmation must match!");
-        }else{
-            createUser();
-            alert(`User Created`);
+        else{
+            if(window.confirm(`Are the data you have sufficed correct?`)){
+                createUser();
+                alert(`User created with an email of ${email}`);
+                history.push('/');
+            }
         }
     }
     const createUser = async () =>{
@@ -33,9 +38,10 @@ function Register() {
         const data = res.json();
         console.log(data);
     }
-
+ 
     return (
         <div>
+            <Header title="Sign Up" desc="Fill this form to create your account!"/>
             <form onSubmit={handleSubmit}>
                 <label>First Name</label>
                 <label style={{paddingLeft:'125px'}}>Last Name</label><br />
