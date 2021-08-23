@@ -1,12 +1,22 @@
-function Header() {
+import {useHistory} from 'react-router'
+function Header({title,desc,link,visible}) {
+    const history = useHistory();
+    const setLink = (to) =>{
+        history.push(`/${to}`)
+    }
     return (
         <header className="header">
-            <h2>Sign Up</h2>
-            <p>Fill this form to create your account!</p>
-            <hr />
+            {visible?(<button className="btn2" onClick={()=> setLink(link)}>Back</button>): ''}
+            <h2>{title}</h2>
+            <p>{desc}</p>
+            <hr/>
         </header>
     )
 }
 
+Header.defaultProps ={
+    visible : false,
+    link : '',
+}
 
 export default Header
