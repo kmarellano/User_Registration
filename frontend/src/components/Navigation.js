@@ -10,7 +10,7 @@ function Navigation() {
 
     return (
         <div>
-            <Header title="Navigation Page"/>
+            <Header title="Navigation Page" />
             <button className="btn" style={{padding: '10px 195px',backgroundColor:'black'}} 
             onClick={() => navigateLink('users')}>Users</button>
             <br />

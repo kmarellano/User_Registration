@@ -15,8 +15,8 @@ function Users() {
         setUser(data);
     }
 
-    const deleteUser = async (id) =>{
-        if( window.confirm(`Delete ${user.firstname} from the database?`)){
+    const deleteUser = async (id,firstname) =>{
+        if( window.confirm(`Delete ${firstname} from the database?`)){
             const res = await fetch(`http://localhost:8000/api/users/delete/${id}`,{
                 method: 'DELETE',
             })
@@ -36,7 +36,7 @@ function Users() {
 
     return (
         <div>
-            <Header title="Users"/>
+            <Header title="Users" visible="true"/>
             {user.map((user)=>(
             <User 
                 key={user._id} 

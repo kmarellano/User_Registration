@@ -14,7 +14,7 @@ function User({firstname,lastname,phone,email,birthday,id, deleteUser}) {
         <div className="event">
             <h3>{firstname} {lastname} 
             <AiFillDelete style={{position:'sticky', left:'350px'}}
-            onClick={()=> deleteUser(id)}/>
+            onClick={()=> deleteUser(id,firstname)}/>
             <AiFillEdit onClick={()=> editUser(id)}/> </h3>
             <p>{email}</p>
             <p>{phone}</p>

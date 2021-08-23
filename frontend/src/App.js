@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Body from './components/Body'
 import Register from './components/Register'
 import Users from './components/Users';
+import Edit from './components/Edit';
+
 function App() {
   return (
     <div className="App">
@@ -11,7 +13,7 @@ function App() {
               <Route path="/" exact component={Body} />
               <Route path="/users" exact component={Users} />
               <Route path="/register" exact component={Register} />
-              <Route path="/editUser/:id" exact component={Body} />
+              <Route path="/editUser/:id" exact component={Edit} />
             </Switch>
         </div>
       </Router>
